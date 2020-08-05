@@ -1,12 +1,18 @@
 import React from "react";
+import { Router } from "react-router-dom";
+import Routes from "./routes";
+import DefaultLayout from "./components/Layout";
+import history from "./services/history";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>works</h1>
-    </div>
+    <Router history={history}>
+      <DefaultLayout>
+        <Routes />
+      </DefaultLayout>
+    </Router>
   );
-}
+};
 
 export default App;
